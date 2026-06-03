@@ -1955,11 +1955,11 @@ function refreshUI() {
 
 
 // Sound Section Start
-const moveSound = new Audio("sounds/move.mp3");
-const captureSound = new Audio("sounds/capture.mp3");
-const checkSound = new Audio("sounds/check.mp3");
-const mateSound = new Audio("sounds/checkmate.mp3");
-const drawSound = new Audio("sounds/draw.mp3");
+const moveSound = new Audio("move.mp3");
+const captureSound = new Audio("capture.mp3");
+const checkSound = new Audio("check.mp3");
+const mateSound = new Audio("checkmate.mp3");
+const drawSound = new Audio("draw.mp3");
 
 function safePlay(audio) {
   if (!audio) return;
