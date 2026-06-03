@@ -759,19 +759,19 @@ drawBoard();
 
 function getPieceImage(piece) {
   const map = {
-    "♔": "Image/wKing.svg",
-    "♕": "Image/wQueen.svg",
-    "♖": "Image/wRook.svg",
-    "♗": "Image/wBishop.svg",
-    "♘": "Image/wKnight.svg",
-    "♙": "Image/wPawn.svg",
+    "♔": "wKing.svg",
+    "♕": "wQueen.svg",
+    "♖": "wRook.svg",
+    "♗": "wBishop.svg",
+    "♘": "wKnight.svg",
+    "♙": "wPawn.svg",
 
-    "♚": "Image/bKing.svg",
-    "♛": "Image/bQueen.svg",
-    "♜": "Image/bRook.svg",
-    "♝": "Image/bBishop.svg",
-    "♞": "Image/bKnight.svg",
-    "♟": "Image/bPawn.svg"
+    "♚": "bKing.svg",
+    "♛": "bQueen.svg",
+    "♜": "bRook.svg",
+    "♝": "bBishop.svg",
+    "♞": "bKnight.svg",
+    "♟": "bPawn.svg"
   };
 
   return map[piece];
