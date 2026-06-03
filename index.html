@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width,
+    initial-scale=1,
+    maximum-scale=1,
+    user-scalable=no,
+    viewport-fit=cover">
+  <title>Chess Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- TURN BAR -->
+  <div id="turnBar" class="turn-bar">
+
+    <div id="whiteTurn" class="turn-player active">
+      <img src="Image/wKing.svg" alt="">
+      <span>White Move</span>
+    </div>
+
+    <div id="blackTurn" class="turn-player">
+      <img src="Image/bKing.svg" alt="">
+      <span>Black Move</span>
+    </div>
+
+  </div>
+
+  <div id="history"></div>
+
+  <div class="player-info black-info">
+
+  <div class="captured-section">
+    <div class="player-label">Black Captured</div>
+
+    <div id="blackCaptured" class="captured-box"></div>
+  </div>
+
+  <div id="blackPoints" class="points-box">
+    +0
+  </div>
+
+  </div>
+
+  <div id="board-container">
+    <div id="board"></div>
+  </div>
+
+  <div class="player-info white-info">
+
+  <div class="captured-section">
+    <div class="player-label">White Captured</div>
+
+    <div id="whiteCaptured" class="captured-box"></div>
+  </div>
+
+  <div id="whitePoints" class="points-box">
+    +0
+  </div>
+
+  </div>
+
+  <div class="top-bar">
+
+    <div class="controls">
+      <button class="btn reset" onclick="askReset()">Restart</button>
+
+      <button id="landscapeBtn" class="btn flip">Landscape</button>
+
+      <button class="btn undo" onclick="undoMove()">Undo</button>
+
+      <button class="btn redo" onclick="redoMove()">Redo</button>
+
+      <button class="btn flip" onclick="flipBoard()">Flip</button>
+    </div>
+
+  </div>
+
+    <div id="promotionModal" class="hidden">
+
+      <div class="promo-box">
+
+        <div class="promo-title">
+          Choose Promotion
+        </div>
+
+        <div class="promo-options">
+
+          <div class="promo-card" onclick="choosePromotion('q')">
+            <img src="">
+            <span>Queen</span>
+          </div>
+
+          <div class="promo-card" onclick="choosePromotion('r')">
+            <img src="">
+            <span>Rook</span>
+          </div>
+
+          <div class="promo-card" onclick="choosePromotion('b')">
+            <img src="">
+            <span>Bishop</span>
+          </div>
+
+          <div class="promo-card" onclick="choosePromotion('n')">
+            <img src="">
+            <span>Knight</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+      <!-- =========================
+     CHECKMATE MODAL
+            ========================= -->
+            <div id="checkmateModal" class="hidden">
+              <div class="mate-box">
+                <div class="mate-crown">👑</div>
+                <div class="mate-title">
+                  CHECKMATE
+                </div>
+                <div id="mateWinner" class="mate-winner">
+                  White Wins!
+                </div>
+                <div class="mate-sub">
+                  The king has fallen.
+                </div>
+                <div class="mate-actions">
+                  <button class="mate-btn restart"
+                          onclick="closeMateModal(); resetGame();">
+                    🔄 New Game
+                  </button>
+                  <button class="mate-btn close"
+                          onclick="closeMateModal()">
+                    ✖ Close
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div id="checkBanner" class="hidden">
+               ⚠️ Check!
+            </div>
+
+            <!-- =========================
+     DRAW MODAL
+========================= -->
+<div id="drawModal" class="hidden">
+
+  <div class="draw-box">
+
+    <div class="draw-icon">🤝</div>
+
+    <div class="draw-title">
+      DRAW
+    </div>
+
+    <div id="drawReason" class="draw-reason">
+      Stalemate
+    </div>
+
+    <div class="draw-sub">
+      The game ended in a draw.
+    </div>
+
+    <div class="draw-actions">
+
+      <button class="draw-btn restart"
+              onclick="closeDrawModal(); resetGame();">
+        🔄 New Game
+      </button>
+
+      <button class="draw-btn close"
+              onclick="closeDrawModal()">
+        ✖ Close
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+    
+      <div id="resetModal" class="hidden">
+        <div class="reset-box">
+          <h2>! Reset Game !</h2>
+          <p>Game is still running! <br> Are you sure you want to restart?</p>
+
+          <div class="reset-actions">
+            <button onclick="confirmReset()" class="yes">Yes</button>
+            <button onclick="closeReset()" class="no">No</button>
+          </div>
+        </div>
+      </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
