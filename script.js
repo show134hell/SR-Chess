@@ -1894,8 +1894,8 @@ function showCheckmateModal(winner) {
       : "Black Wins!";
 
   const kingImg = winner === "white"
-  ? "Image/wKing.svg"
-  : "Image/bKing.svg";
+  ? "wKing.svg"
+  : "bKing.svg";
 
   document.getElementById("mateWinner").innerHTML = `
   <img src="${kingImg}" style="width:60px;height:60px;vertical-align:middle;margin-right:8px;">
