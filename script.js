@@ -562,16 +562,16 @@ if (pendingPromotion) {
 
   const pieces = isWhite
     ? {
-        q: "Image/wQueen.svg",
-        r: "Image/wRook.svg",
-        b: "Image/wBishop.svg",
-        n: "Image/wKnight.svg"
+        q: "wQueen.svg",
+        r: "wRook.svg",
+        b: "wBishop.svg",
+        n: "wKnight.svg"
       }
     : {
-        q: "Image/bQueen.svg",
-        r: "Image/bRook.svg",
-        b: "Image/bBishop.svg",
-        n: "Image/bKnight.svg"
+        q: "bQueen.svg",
+        r: "bRook.svg",
+        b: "bBishop.svg",
+        n: "bKnight.svg"
       };
 
   const order = ["q", "r", "b", "n"];
